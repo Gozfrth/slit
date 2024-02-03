@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon="⌂",
 )
 
-header = """# THE COMPUTER INTELLIGENCE CLUB"""
+header = """# COMPUTER INTELLIGENCE CLUB"""
 description = """
 - ##### Discover our [mission](), meet our talented team, and join us in upcoming events.
 - ##### Dive into insightful [newsletters and blogs](), connecting with a community passionate about computing intelligence.
