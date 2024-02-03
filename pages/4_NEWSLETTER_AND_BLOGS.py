@@ -1,23 +1,23 @@
 import streamlit as st
 from streamlit_card import card
-from blogs import example_collection
+from pages.blogs.example_collection import *
 
-titles = ["Demo-Uber pickups in NYC", "Demo-Langchain", "Demo-Chat with Search"]
-keys = ["uber", "langchain", "chat_with_search"]
+titles = {"Demo-Uber pickups in NYC": uber,
+          "Demo-Langchain": langchain,
+          "Demo-Chat with Search": chat_with_search}
 
-for i in range(len(titles)):
+for title, function in titles.items():
     hasClicked = card(
         styles={
-            "card":{
+            "card": {
                 "width": "auto",
                 "margin": "10px",
-                "padding":"10px",
-                "background-color":"black"
-                },
-            "text":{
-
-            }},
-        on_click=getattr(example_collection, keys[i]),
-        title=titles[i],
+                "padding": "10px",
+                "background-color": "black"
+            },
+            "text": {}
+        },
+        on_click=function,
+        title=title,
         text="",
     )

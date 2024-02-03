@@ -48,6 +48,7 @@ def uber():
     #ADD MAP
 
 def langchain():
+    st.empty()
     from langchain.llms import OpenAI
 
     st.title("🦜🔗 Langchain Quickstart App")
@@ -71,6 +72,7 @@ def langchain():
             generate_response(text)
 
 def chat_with_search():
+    st.empty()
 
     from langchain.agents import initialize_agent, AgentType
     from langchain.callbacks import StreamlitCallbackHandler
@@ -118,3 +120,5 @@ def chat_with_search():
             response = search_agent.run(st.session_state.messages, callbacks=[st_cb])
             st.session_state.messages.append({"role": "assistant", "content": response})
             st.write(response)
+if __name__ == '__main__':
+    pass
