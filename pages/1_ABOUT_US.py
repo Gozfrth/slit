@@ -23,7 +23,7 @@ club_achievements="""Lorem ipsum dolor sit amet, consectetur adipiscing elit, se
 def stream_header():
     for word in header.split():
         yield word + " "
-        time.sleep(0.1)
+        time.sleep(0.05)
 write(stream_header)
 
 st.markdown("""<hr style="border:3px solid rgb(255,255,255) ">""", unsafe_allow_html=True)
